@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/orderPage.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+    <!-- JS -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
+	<script type="text/javascript" src='../JS/header.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	
+	
+    <title>Merav's Cake House</title>  
+	
+   
+	<script> 
+	$(function(){
+	$("#header").load("header.html"); 
+	$("#footer").load("footer.html"); 
+	});
+	</script>
+	
+	<script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
+	
+	
+
+  </head>
+  
+	<body> 
+		<div id="wrapper" class="container-fluid">
+
+			<div id="internalWrapper" class="container-fluid">
+
+				<header>
+					<div id="header"></div>
+				</header>
+	
+					<br>
+        
+					<p> פרטי הזמנה</P>
+
+
+                    <center>
+						<div class="form-group col-md-9">
+
+							<form name="myForm" class="form" action="../PHP/finalPage.php" method="get" id="form">
+
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="fname">שם פרטי</label>
+										<input onclick="checkInputs()"  type="text" class="form-group" id="fname" name="fname" placeholder="שם פרטי"  required>
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+      
+									<div class="form-group col-md-6">
+										<label for="inputPassword4">שם משפחה</label>
+										<input onclick="checkInputs()" type="text" class="form-group" id="lname" name="lname" placeholder="שם משפחה" required>
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+								</div>
+  
+								<div class="form-group col-md-12">
+									<label for="inputAddress">כתובת אימייל</label>
+									<input onclick="checkInputs()" type="email" class="form-group" id="email" name="email" placeholder="abc@gmail.com" required>
+									<i class="fas fa-check-circle"></i>
+									<i class="fas fa-exclamation-circle"></i>
+									<small>Error message</small>
+								</div>
+  
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="inputZip">טלפון</label>
+										<input onclick="checkInputs()" type="tel" class="form-group" id="inputTel" name="tel" placeholder="050-0000000" required pattern="[0-9]{3}-[0-9]{7}">
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+  
+									<div class="form-group col-md-6">
+										<label for="inputCity">עיר</label>
+										<input onclick="checkInputs()" type="text" class="form-group" id="inputCity" name="city" placeholder="עיר" required>
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+								</div>
+      
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="inputAddress">רחוב</label>
+										<input onclick="checkInputs()" type="text" class="form-group" id="inputAddress" name="address" placeholder="רחוב" required>
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+  
+									<div class="form-group col-md-6">
+										<label for="inputAddress">מספר בית</label>
+										<input onclick="checkInputs()" type="number" class="form-group" id="inputhnum" name="hnum" placeholder="מספר בית" pattern="[0-9]" required>
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+  
+								</div>
+    
+								<div class="form-row">
+									<div class="form-group col-md-6">
+										<label for="inputZip">מיקוד</label>
+										<input onclick="checkInputs()" type="number" class="form-group" id="inputZip" name="zip" placeholder="מיקוד"  minlength="7" maxlength="7" pattern="[0-9]{7}" required>
+										<i class="fas fa-check-circle"></i>
+										<i class="fas fa-exclamation-circle"></i>
+										<small>Error message</small>
+									</div>
+   
+									<div class="form-group col-md-6">
+										<label for="inputZip">למתי תרצו להזמין?</label>
+										<input onclick="checkInputs()" type="date" class="form-group" id="inputDate" name="date" required>
+									</div> 
+								</div>
+    
+								
+									<label>הערות</label><br>
+									<textarea class="form-group" name="comments" rows="4" cols="50"></textarea>
+							
+    	                      
+								<center><button type="submit" value="Submit" formaction="../PHP/finalPage.php" >מעבר לתשלום</button></center>
+
+							</form>
+						</div>
+					</center>
+			             
+					<div id="footer"></div>
+					
+			</div>
+		</div>
+				<script type="text/javascript" src='../JS/orderPage.js'></script>
+				
+
+
+	</body>
+
+</html>

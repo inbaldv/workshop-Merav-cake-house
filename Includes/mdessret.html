@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="../JS/catalog.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../CSS/cupcakes.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/Reciep.css">
+	<script type="text/javascript" src='../JS/header.js'></script>
+	<script type="text/javascript" src='../JS/Reciep.js'></script>
+    
+    <title>Merav's Cake House</title>
+    
+    <script> 
+	$(function(){
+	$("#header").load("header.html"); 
+	$("#footer").load("footer.html"); 
+	});
+	</script>
+    
+  </head>
+<body>
+ 
+<div id="wrapper" class="container-fluid">
+	<div id="internalWrapper" class="container-fluid">
+	    <header>
+		    <div id="header"></div>
+	    </header>
+
+        <br>
+        
+        <p class="pcatalog"> קינוחים מטוגנים</P>
+			   
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake25.jpg" alt="cake25" style="width:100%">
+  	                <h5>ספינג'</h5>
+                    <h6>מתכון מנצח של ספינג' מרוקאי מסורתי שמגישים לצד סוכר או דבש ואי אפשר להפסיק לאכול</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()"title="לא פעיל">קרא עוד</button> </p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake26.jpg" alt="cake26" style="width:100%">
+  	                <h5>דונאטס </h5>
+                    <h6>קינוח שהוא שילוב מושלם ומושחת של בצק שמרים עשיר בחמאה וגם טיגון בשמן עמוק</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()"title="לא פעיל">קרא עוד</button> </p>
+                 </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake28.jpg" alt="cake28" style="width:100%">
+  	                <h5>סופגניות</h5>
+                    <h6>סופגניות שמכינים בקלות בבית, והן יוצאות תפוחות, עגלגלות ורכות כמו כריות</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()"title="לא פעיל">קרא עוד</button> </p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake27.jpg" alt="cake27" style="width:100%">
+  	                <h5>סיגרים במילוי שקדים</h5>
+                    <h6>סיגר מתוק עשיר בטעם , מתפצח בעונג בחיך, קינוח פרווה שתמיד גונב את ההצגה</h6>
+	                 <p><button class="bcard" onclick="InactiveAlert()"title="לא פעיל">קרא עוד</button> </p>
+                </div>
+            </div>
+        </div>
+
+    
+	    <br>
+	    <br>
+	    <br>
+
+         <div id="footer"></div>         
+
+	</div>
+</div>
+
+<script>
+function InactiveAlert() {
+  alert("העמוד לא פעיל כרגע");
+}
+</script>
+
+</body>  
+</html>

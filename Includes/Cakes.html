@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" style="position:relative;">
+  <head>
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/Reciep.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script type="text/javascript" src='../JS/header.js'></script>
+	<script type="text/javascript" src='../JS/Reciep.js'></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+    <title>Merav's Cake House</title>
+    
+    <script> 
+	$(function(){
+	$("#header").load("header.html"); 
+	$("#footer").load("footer.html"); 
+	});
+	</script>
+	
+	<script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
+    
+  </head>
+<body>
+ 
+<div id="wrapper" class="container-fluid">
+	<div id="internalWrapper" class="container-fluid">
+	    <header>
+		    <div id="header"></div>
+	    </header>
+        
+        <br>
+        
+        <p class="pcatalog"> עוגות</P>
+			   
+        
+         <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake9.jpg" alt="cake9" style="width:100%">
+  	                <h5>עוגת גבינה פירורים</h5>
+                    <h6>עוגה חגיגית במילוי עשיר וקטיפתי ..</h6>
+                    <p><button class="bcard" onclick="redirectcheesecake()" title="לא פעיל" >קרא עוד</button></p>
+                </div>	
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake8.jpg" alt="cake8" style="width:100%">
+  	                <h5>עוגת סולת</h5>
+                    <h6>עוגת סולת רכה ועסיסית, שעוברת מדור לדור. כי עם מתכון מנצח, לא מתווכחים</h6>
+                    <p><button class="bcard" onclick="redirectsolet()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake12.jpg" alt="cake12" style="width:100%">
+  	                <h5>עוגת גבינה לוטוס</h5>
+                    <h6>עוגה גבינה קרה עם לוטוס, הכי פשוטה שיש , הכי טעימה שיש והיא גם מרשימה!</h6>
+                    <p><button class="bcard" onclick="redirectcakel()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake13.jpg" alt="cake13" style="width:100%">
+  	                <h5>עוגת גבינה אוראו</h5>
+                    <h6> מלית עשירה של גבינה עם שוקולד לבן ושברי עוגיות אוראו מעוטרת קצפת וערימת עוגיות.</h6>
+                     <p><button class="bcard" onclick="redirectocake()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+        </div>
+        
+        <br>
+            
+        <br>
+        
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake6.jpg" alt="cake6" style="width:100%">
+  	                <h5>שמרים</h5>
+                    <h6> עוגת שמרים במילוי שוקולד שאי אפשר להפסיק ליישר..</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()">קרא עוד</button></p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake7.jpg" alt="cake7" style="width:100%">
+  	                <h5>עוגת שיש</h5>
+                    <h6>הצלחתי להגיע לטעם הכי מדויק שיכולתי לבקש מאלוהי השייש, הטעמים והצורות ...</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()">קרא עוד</button></p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake11.jpg" alt="cake11" style="width:100%">
+  	                <h5>עוגת בראוניז</h5>
+                    <h6> חמישה מרכיבים בלבד זה כל מה שאתם צריכים כדי להכין את הבראוניז הכי טעימים..</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()">קרא עוד</button></p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake10.jpg" alt="cake10" style="width:100%">
+  	                <h5>עוגת גבינה קלאסית</h5>
+                    <h6>עוגת גבינה נימוחה וגבוהה מתכון מנצח והטעם מושלם </h6>
+                    <p><button class="bcard" onclick="redirectcreamcake()">קרא עוד</button></p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <br>
+
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake15.jpg" alt="cake15" style="width:100%">
+  	                <h5>עוגת אגוזים </h5>
+                    <h6>מתכון קל לעוגת אגוזים מהירה שמכינים בקערה אחת בלבד!</h6>
+                    <p><button class="bcard" onclick="InactiveAlert()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake16.jpg" alt="cake16" style="width:100%">
+  	                <h5>עוגת מייפל פקאן</h5>
+                    <h6>השידוך המושלם לקפה - מי מרתיח את המים?</h6>
+                   <p><button class="bcard" onclick="InactiveAlert()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake18.jpg" alt="cake17" style="width:100%">
+  	                <h5>עוגת גזר</h5>
+                    <h6>עוגת גזר נימוחה, טעימה, רכה ומיוחדת במינה, עם תוספת.. </h6>
+                    <p><button class="bcard" onclick="InactiveAlert()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+  
+            <div class="column">
+                <div class="card">
+                    <img src="../Images/cake19.jpg" alt="cake17" style="width:100%">
+  	                <h5>עוגת שוקולד צ'יפס</h5>
+                    <h6>עוגת שוקולד צ'יפס בחושה ואוורירית, קלה להכנה בפחות..</h6>
+                     <p><button class="bcard" onclick="InactiveAlert()" title="לא פעיל" >קרא עוד</button></p>
+                </div>
+            </div>
+        </div>    
+            
+
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+
+        <div id="footer"></div>		
+
+	</div>
+</div>
+</body>    
+</html>
