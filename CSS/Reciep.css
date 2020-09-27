@@ -1,0 +1,73 @@
+* {
+	font-family: 'calibri';
+    }
+		
+#wrapper{
+	background-color: white;
+}
+#internalWrapper{
+	width:95%;
+}
+
+p{
+	font-size:25px;
+    text-align:center;
+    font-weight: bold;
+}
+button{
+    text-align:right;
+    font-size: 25px;
+    display: inline-block;
+    background:#ffcccc;
+    border:solid 3px lavender;
+    color:black;
+    padding: 15px 30px;
+}
+    
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    margin: auto;
+    text-align: center;
+}
+.bcard{
+    font-size:15px;}
+
+.colume.img{ 
+    height: 150px;
+    width: 150px;}
+
+@media screen and (max-width: 800px) {
+  .column {
+    margin-top: 6px;
+    width: 50%;
+	height: 390px;
+
+  }
+}

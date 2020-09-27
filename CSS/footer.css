@@ -1,0 +1,42 @@
+* {font-family: 'calibri';}
+		
+#wrapper{
+	background-color: white;}
+
+#internalWrapper{
+	width:95%;}
+
+p{
+	font-size:25px;
+    text-align:center;
+    font-weight: bold;}
+
+nav{
+	background-color: #ffcccc;
+	font-size:25px;
+    font-weight: bold;
+    border: 5px solid lavender;}
+
+footer{
+    background-color: #ffcccc;
+    text-align: center;
+	font-weight: bold;
+    display:block;
+}
+
+button{
+    text-align: right;
+    font-size: 25px;
+    display: inline-block;
+    background: #ffcccc;
+    border: solid 3px lavender;
+    color: black;
+    padding: 15px 30px;}
+
+input{text-align:right;}
+ 
+
+.fb{ 
+    background:white;
+    border:solid 3px lavender;
+    font-size: 15px;}

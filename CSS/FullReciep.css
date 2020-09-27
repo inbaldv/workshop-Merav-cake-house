@@ -1,0 +1,74 @@
+* {font-family: 'calibri';}
+
+#footer{direction:ltr;}
+
+h1{
+    text-align:center;
+    font-size:20px;
+}
+
+p{
+    font-size:20px;
+    unicode-bidi: isolate;
+    direction: rtl;
+    text-align:center;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+
+body {
+    font-family: 'Alef';
+    font-size: 16px;
+    text-align: right;
+}
+
+
+.recip{
+    text-align: right;
+    direction:rtl;
+}
+
+img{
+    max-width: 100%;
+}
+
+description{
+	font-weight: lighter;
+}
+
+.control[data-v-537aa0c2] {
+    font-family: opensans_hebrew, sans-serif;
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    padding-top: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 20px;
+    background: #ffffff !important;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;}
+    
+    .vehicle2 {
+    margin: 0 auto;
+    text-align: right;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+    float: right;
+    flex-wrap: wrap;
+}
+
+
