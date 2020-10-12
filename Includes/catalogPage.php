@@ -1,0 +1,214 @@
+<?php
+    require "../PHP/header.php";
+    session_start ();
+?>
+
+<!doctype html>
+<html lang="en">
+  <head>
+  
+	<!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/footer.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/catalog.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+    <!-- JS -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script> 
+	<script type="text/javascript" src='../JS/header.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="../JS/catalog.js"></script>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Merav's Cake House</title>
+    
+ <!--   <script> -->
+	<!--$(function(){-->
+	<!--$("#header").load("header.html"); -->
+	<!--$("#footer").load("footer.html"); -->
+	<!--});-->
+	<!--</script>-->
+	
+	<script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
+    
+  </head>
+<body>
+ 
+<div id="wrapper" class="container-fluid">
+	<div id="internalWrapper" class="container-fluid">
+	    <header>
+			<div id="header"></div>
+	    </header>
+	
+        <br>
+        
+        <p class="pcatalog" style="font-size: 35px"> המוצרים שלנו</P>
+			<div class="container" id="overlayf">
+			    <button class="buy" id="buyB" onclick="off()">חזרה למוצרים</button>
+
+                <form action="../PHP/catalog_php.php" method="post">
+                     <button class="buy" id="buyB" onclick="TPrice();">להמשך ביצוע הזמנה</button>
+                     <div id="item"></div>
+                     <input type="hidden" name="Tprice" id="pc">
+                </form>
+           
+		        <div class="total">
+				    <p> !הזמן היום וקבל 25% הנחה </p> <br>
+					<input type="number" id="pcc"><br>
+					<button onclick="TPrice()">בחירה נהדרת! לחץ פה לחישוב העלות לאחר ההנחה</button>
+				</div>
+	        </div>
+
+
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/cake1.jpeg" alt="cake1" style="width:100%">
+  	                    <h5>עוגת שוקולד</h5>
+  	                    <p class="price">₪ 150</p>
+                        <h6> עוגת שוקולד בחושה שכולם אוהבים</h6>
+                        <p><button class="bcard" onclick="addItem(0); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/cake2.jpeg" alt="Images/cake2" style="width:100%">
+  	                    <h5>עוגת גבינה</h5>
+  	                    <p class="price">₪ 150</p>
+                        <h6>עוגת גבינה פירורים חגיגית במילוי עשיר וקטיפתי</h6>
+                        <p><button class="bcard" onclick="addItem(1); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+  
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/cake3.jpeg" alt="Images/cake3" style="width:100%">
+  	                    <h5>עוגת פירות יער</h5>
+  	                    <p class="price">₪ 200</p>
+                        <h6> עוגת גבינה קרה עם פירות יער טריים</h6>
+                        <p><button class="bcard" onclick="addItem(2); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+  
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/cake4.jpeg" alt="Images/cake4" style="width:100%">
+  	                        <h5>עוגת טירמיסו</h5>
+                            <p class="price">₪ 200</p>
+                            <h6>עוגת שכבות איטלקית עם מסקרפונה וקפה </h6>
+                            <p><button class="bcard" onclick="addItem(3); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/dessert1.jpeg" alt="Images/dessert1" style="width:100%">
+  	                    <h5>קינוח כוסות לוטוס </h5>
+  	                    <p class="price">₪ 100</p>
+                        <h6>קינוח כוסות גבינה עם עוגיות לוטוס</h6>
+                        <p><button class="bcard" onclick="addItem(4); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/dessert2.jpeg" alt="Images/dessert2" style="width:100%">
+  	                    <h5>פבלובה</h5>
+  	                    <p class="price">₪ 150</p>
+                        <h6>עוגת פבלובה מרשימה עם קצפת ופירות יער</h6>
+                        <p><button class="bcard" onclick="addItem(5); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+  
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/dessert3.jpeg" alt="Images/dessert3" style="width:100%">
+  	                    <h5>קינוח כוסות תותים</h5>
+  	                    <p class="price">₪ 100</p>
+                        <h6>קינוח כוסות גבינה עם תותים וקראמבל </h6>
+                        <p><button class="bcard" onclick="addItem(6); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+  
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/dessert4.jpeg" alt="Images/dessert4" style="width:100%">
+  	                    <h5>מקרונים</h5>
+                        <p class="price">₪ 150</p>
+                        <h6>עוגיה צרפתית במבחר טעמים שונים </h6>
+                        <p><button class="bcard" onclick="addItem(7); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/bread1.jpeg" alt="Images/bread1" style="width:100%">
+  	                    <h5>לחם שיפון </h5>
+  	                    <p class="price">₪ 50</p>
+                        <h6>לחם בריא העשוי מקמח מלא ושיפון </h6>
+                        <p><button class="bcard" onclick="addItem(8); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/bread2.jpeg" alt="Images/bread2" style="width:100%">
+  	                    <h5>לחם מחמצת</h5>
+  	                    <p class="price">₪ 50</p>
+                        <h6>לחם רך מבפנים וקראנצ'י מבחוץ</h6>
+                        <p><button class="bcard" onclick="addItem(9); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+  
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/bread3.jpeg" alt="Images/bread3" style="width:100%">
+  	                    <h5>לחם אגוזים</h5>
+  	                    <p class="price">₪ 50</p>
+                        <h6>לחם מלא במילוי אגוזים וצימוקים </h6>
+                        <p><button class="bcard" onclick="addItem(10); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+  
+                <div class="column">
+                    <div class="card">
+                        <img src="../Images/bread4.jpeg" alt="Images/bread4" style="width:100%">
+  	                    <h5>לחם כוסמין</h5>
+                        <p class="price">₪ 50</p>
+                        <h6> לחם כוסמין במילוי פירות יבשים </h6>
+                        <p><button class="bcard" onclick="addItem(11); addToCart()">הוסף לסל</button></p>
+                    </div>
+                </div>
+            </div>
+            
+	        <br>
+
+            <p><button  onclick="yes()">מעבר לסל הקניות</button></p>
+
+            <!--<div id="footer"></div>-->
+
+	</div>
+</div>
+
+</body>             
+</html>
+
+<?php
+    require "../PHP/footer.php";
+?>

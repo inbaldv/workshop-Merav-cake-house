@@ -1,4 +1,7 @@
-
+<?php
+    session_start();
+    require "recipes_header.php"
+?>
 
 <!doctype html>
 <html lang="en" style="position:relative;">
@@ -10,52 +13,57 @@
 	<link rel="stylesheet" type="text/css" href="../CSS/footer.css">
 	<link rel="stylesheet" type="text/css" href="../CSS/FullReciep.css">
 
+
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src='../JS/Reciep.js'></script>
+
 	<script type="text/javascript" src='../JS/header.js'></script>
-  
+   <script type="text/javascript" src='../JS/Reciep.js'></script>
+
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
    
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   
 
+	
     <title>Merav's Cake House</title>
 
-    <script> 
-	$(function(){
-	$("#header").load("header.html"); 
-	$("#footer").load("footer.html"); 
-	});
-	</script>
-	
-	<script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
+ <!--   <script> -->
+	<!--$(function(){-->
+	<!--$("#header").load("header.html"); -->
+	<!--$("#footer").load("footer.html"); -->
+	<!--});-->
+	<!--</script>-->
 
+    <script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
+    
   </head>
 <body>
 
-    <div id="wrapper" class="container-fluid">
-        <div id="internalWrapper" class="container-fluid">
-            
-   <header>
-        <div id="header"></div>
-   </header>
 
+<div id="wrapper" class="container-fluid">
+    <div id="internalWrapper" class="container-fluid">
+        <header>
+            <div id="header"></div>
+        </header>
+    </div>
+    
     <div id="mng">
 
         <div id="text">
-            <h1 class="pcatalog"> עוגת גבינה לוטוס </h1>
-            <br>
-        
-            <center><img src="../Images/cake12.jpg" alt="cake12" class="responsive">
-            <p> עוגה גבינה קרה עם לוטוס, הכי פשוטה שיש , הכי טעימה שיש והיא גם מרשימה  </p></center>
-          
+               <h1 class="pcatalog"> עוגת קרמבו</h1>
+                <br>
+                <center><img src="../Images/cake21.jpg" alt="Nature" class="responsive">
+                <p> אין דבר כזה חורף בלי קרמבו בסיס עוגתי נהדר, מלית קרמית לבנה וציפוי שוקולד דק. גשם, בוא כבר.</p></center>
+ 
             <div class="recip" style="text-align:rtl">
+
                 <h3>המצרכים:</h3>
                 <ul>
                     <li>תבנית בקוטר 24 ס"מ</li>
@@ -63,44 +71,46 @@
 
                 <h3>לבסיס:</h3>
                 <ul>
-                    <li>2 כוסות (200 גרם) עוגיות לוטוס טחונות לפירורים דקים</li>
-                    <li>75 גרם חמאה מומסת</li>
-                    <li>Milk</li>
+                    <li>200 גרם שוקולד מריר, קצוץ</li> 
+                    <li>80 גרם חמאה, מומסת</li>
+                    <li>4 ביצים L, בטמפרטורת החדר</li>
+                    <li>80 גרם (שליש כוס ועוד כף) סוכר</li>
+                    <li>קורט מלח</li>
                 </ul>
-    
-                <h3>לקרם גבינה ושוקולד לבן:</h3>
+                
+                <h3>לקרם וניל:</h3>
                 <ul>
-                    <li>100 גרם שוקולד לבן קצוץ</li>
-                    <li>60 מ"ל (1/4 כוס) חלב</li>
-                    <li>25 גרם חמאה</li>
-                    <li>1 חבילה (80 גרם) אבקת אינסטנט פודינג וניל</li>
-                    <li>1 מיכל (225 גרם) גבינת שמנת 25%</li>
-                    <li>1 מיכל (250 גרם) גבינה לבנה 5% או 9%</li>
-                    <li>65 גרם (1/3 כוס) סוכר</li>
-                    <li>2 מיכלים (500 מ"ל) שמנת מתוקה</li>
+                    <li>500 גרם (2 גביעים) שמנת מתוקה חלבית או צמחית</li>
+                    <li>120 מ"ל (חצי כוס) חלב או חלב סויה</li>
+                    <li>80 גרם (חבילה) פודינג וניל אינסטנט כשר לפסח</li>
                 </ul>
-
-                <h3>לציפוי:</h3>
+            
+                <h3>לעיטור:</h3>
                 <ul>
-                    <li>150 גרם (1/2 כוס) ממרח לוטוס</li>
-                </ul>  
+                    <li>100 גרם שוקולד מריר, קצוץ</li>
+                    <li>120 מ"ל (חצי כוס) שמנת מתוקה חלבית או צמחית</li>
+                    <li>מעט שוקולד לבן מגורר בקולפן, לעיטור</li>
+                </ul>
 
                 <h3>אופן ההכנה</h3>
                 <ol>
-                    <li>מכינים את הבסיס של עוגת הלוטוס: מערב
-                    בים עוגיות וחמאה מומסת לתערובת לחה, מעבירים לתבנית ומהדקים בשכבה אחידה. שומרים במקפיא בזמן שמכינים את המלית.</li>
+                    <li>לבסיס עוגת שוקולד: מחממים תנור ל-170 מעלות, משמנים ומרפדים תחתית תבנית 24 ס"מ בנייר אפייה.</li>
                     <br>
-                    <li>מכינים את הקרם: ממיסים במיקרוגל שוקולד, חלב וחמאה. מערבבים לקבלת תערובת נוזלית ומצננים מעט.</li>
+                    <li>ממיסים את השוקולד והחמאה או שמן הקוקוס במיקרוגל, מצננים.</li>
                     <br>
-                    <li>שמים גבינות ואבקת אינסטנט פודינג בקערה נפרדת ומערבבים. מוסיפים את תערובת השוקולד הלבן וטורפים במטרפה ידנית לבלילה חלקה.</li>
+                    <li>בקערת מערבל חשמלי מקציפים את הביצים עם הסוכר והמלח 5-7 דקות לקצף תפוח וסמיך. מוסיפים את השוקולד המומס ומקציפים קצרות לתערובת חלקה.</li>
                     <br>
-                    <li>מקציפים שמנת מתוקה עם סוכר לקצפת יציבה ומקפלים לתערובת הגבינה בשלושה מחזורים.</li>
+                    <li>יוצקים את הבלילה לתבנית ואופים 25 דקות כך שהעוגה תפוחה וחלקה העליון נראה יבש, מוציאים מיד את העוגה מהתנור לצינון מלא, העוגה תאבד מגובהה וזה בסדר.</li>
                     <br>
-                    <li> מוציאים את התבנית מהמקפיא ומניחים בדופן הפנימית שקף לעוגה. יוצקים את קרם הגבינה מעל הבסיס ומיישרים את פניה בעזרת מרית מדורגת. שומרים במקרר למשך הלילה.</li>
+                    <li>לקרם וניל: בקערת מערבל חשמלי מקציפים את כל חומרי הקרם לקבלת קרם יציב ומשטחים על העוגה, מעבירים לקירור ל-6 שעות או יותר.</li>
                     <br>
-                    <li>מצפים: מניחים ממרח לוטוס בקערה ומחממים כמה שניות במיקרוגל עד שהוא נוזלי. מערבבים היטב ויוצקים על עוגת הלוטוס הקרה 
-                        מטים את התבנית כך שהציפוי יכסה את פיה באופן אחיד.<br>
-                        מחזירים למקרר ל-30 דקות להתייצבות. ניתן לשמור במקרר עד 5 ימים</li>
+                    <li>לציפוי: ממיסים יחד את חומרי הציפוי במיקרוגל לתערובת חלקה, מצננים היטב כך שהציפוי אינו חם למגע. יוצקים את הציפוי על העוגה ומקררים לחצי שעה. מעטרים בתלתלי שוקולד לבן.</li>
+                    <br>
+                    <li>לסיום קוצצים את עוגיות האוראו המצופות לחתיכות גסות, מוסיפים לקרם ומקפלים עד להטמעה. 
+                        יוצקים את הקרם על תחתית האוראו, ומעבירים לקירור ל-5-6 שעות לפחות להתייצבות, ורצוי למשך הלילה.</li>
+                    <br>
+                    <li>לאחר שהעוגה התייצבה, מקציפים במערבל חשמלי שמנת מתוקה ואבקת סוכר לקצפת יציבה, מעבירים לשקית זילוף ומעטרים את העוגה.
+                        קוצצים את עוגיות האוראו המצופות לרבעים, ועורמים במרכז.</li>
                 </ol>
                 <br>
                 <br>
@@ -108,8 +118,7 @@
             </div>
         </div>
     </div>
-    
-              <center>
+                 <center>
 
     
     
@@ -128,7 +137,7 @@
       <div class="modal-body" style="direction:rtl;float:right;text-align:right;flex-direction:row;">
        
            
-            <p>עוגת לוטוס</p>
+            <p>עוגת קרמבו</p>
            
                             <input type="checkbox" id="parent">סמן/הסר הכל
                             <br>
@@ -136,33 +145,33 @@
             <br>
              
 
-              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="60 מל חלב">
+              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="120 מל חלב">
               <label for="vehicle2"> חלב </label>
-              <div item-count class="count" style="float:left">50 מ"ל</div> <br>
+              <div item-count class="count" style="float:left">120 מ"ל</div> <br>
               <input type="checkbox" id="vehicle3" name="vehicle2" class="child" value="100 גרם שוקולד לבן">
               <label for="vehicle3"> שוקולד לבן  </label>
               <div item-count class="count" style="float:left">100 גרם</div> <br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="250 גרם גבינה לבנה">
-              <label for="vehicle2">5% גבינה לבנה </label>
-              <div item-count class="count" style="float:left">375 גרם</div> <br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="500 מל שמנת מתוקה">
+              <input type="checkbox" id="vehicle3" name="vehicle2" class="child" value="300 גרם שוקולד מריר">
+              <label for="vehicle3"> שוקולד מריר  </label>
+              <div item-count class="count" style="float:left">300 גרם</div> <br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="4 ביצים לארג">
+              <label for="vehicle2">ביצים </label>
+              <div item-count class="count" style="float:left">280 גרם</div> <br>
+              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="620 מל שמנת מתוקה">
               <label for="vehicle2"> שמנת מתוקה </label>
-              <div item-count class="count" style="float:left">500 מ"ל</div> <br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="340 גרם גבינה שמנת  25 אחוז ">
-              <label for="vehicle2"> גבינה שמנת 25%</label>
-              <div item-count class="count" style="float:left">340 גרם</div> <br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 65 גרם סוכר">
+              <div item-count class="count" style="float:left">620 מ"ל</div> <br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 80 גרם סוכר">
               <label for="vehicle2"> סוכר</label>
-              <div item-count class="count" style="float:left">65 גרם</div> <br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 25 גרם חמאה">
+              <div item-count class="count" style="float:left">80 גרם</div> <br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 80 גרם חמאה">
               <label for="vehicle2">חמאה</label>
-            <div item-count class="count" style="float:left" >25 גרם</div> <br>
+            <div item-count class="count" style="float:left" >80 גרם</div> <br>
                <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 80 גרם אינסטנט פודינג">
               <label for="vehicle2">אינסטנט פודינג וניל</label>
-            <div item-count class="count" style="float:left" >80 גרם</div> <br>
-              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="150 גרם ממרח לוטוס">
-              <label for="vehicle2">ממרח לוטוס</label>
-            <div item-count class="count" style="float:left" >150 גרם</div> <br>
+             <div item-count class="count" style="float:left" >80 גרם</div> <br>
+
+          
+       
 
 
               
@@ -206,7 +215,7 @@
       </div>
       <div class="modal-body" style="direction:rtl;float:right;text-align:right;flex-direction:row;">
             <p> בחר מיקום </p>                  
-                      <form method="POST" action="../PHP/super_ocake.php">
+                      <form method="POST" action="../PHP/super_kcake.php">
                       <select name="mySelect" required>
                       <option value="59">אילת, מלכת שבא</option>
                         <option value="108">אשדוד, נמל</option>
@@ -278,10 +287,9 @@
     
     </script>    
        
-       
- 
-       
-       
+    
+      
+         
        <script>
       function send_handle(string)
       {
@@ -292,42 +300,37 @@
        //     let name= document.getElementById("name").value;
             
 
-        var win = window.open(`https://wa.me/?text= רשימת%20קניות%20עוגת%20לוטוס:${msg}`, '_blank');
+        var win = window.open(`https://wa.me/?text= רשימת%20קניות%20עוגת%20קרמבו:${msg}`, '_blank');
 
         }     
     
     </script>
-            
-
-
-    
-    
     
     
     <div>
         <center><video width="400" controls>
-        <source src="Merav's Cakes FINAL .mp4" type="video/mp4">
+            <source src="../Videos/Merav's Cakes FINAL .mp4" type="video/mp4">
         </video></center>
     </div>
             
     <center>
-              <a dir="rtr" href="https://www.facebook.com/Meravs-Cake-House-2185139985089592/">
-			<img border="0" alt="icon missing" src="../Images/facebook.JPG" width="40px" height="auto">
-			</a>
+              <a dir="rtr" href="https://www.facebook.com/Meravs-Cake-House-2185139985089592/"></a>
+                <img border="0" alt="icon missing" src="../Images/facebook.JPG" width="40px" height="auto">
+    
+            <a dir="rtr" href="https://www.instagram.com/meravscakehouse/"></a>
+                <img border="0" alt="icon missing" src="../Images/instegram.JPG" width="40px" height="auto">
 
-			<a dir="rtr" href="https://www.instagram.com/meravscakehouse/">
-			<img border="0" alt="icon missing" src="../Images/instegram.JPG" width="40px" height="auto">
-			</a>
+         
+            <a dir="rtr" href="https://wa.me/972532733898"></a>
+                <img border="0" alt="icon missing" src="../Images/whatsapp.jpg" width="40px" height="auto"> 
+            </center>         
+   
 
-			<a dir="rtr" href="https://wa.me/972532733898">
-			<img border="0" alt="icon missing" src="../Images/whatsapp.jpg" width="40px" height="auto">
-			</a>
-    </center>        
-
-    <div id="footer"></div>
-    </div>
-    </div>
-</body>            
-
+    <!--<div id="footer"></div>-->
+</div>        
+</body> 
 </html>
 
+<?php
+    require "../PHP/footer.php"
+?>

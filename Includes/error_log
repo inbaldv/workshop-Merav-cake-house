@@ -1,0 +1,4 @@
+[03-Oct-2020 21:04:35 UTC] PHP Warning:  require(header.php): failed to open stream: No such file or directory in /home/meravalis/public_html/Includes/aboutme.php on line 2
+[03-Oct-2020 21:04:35 UTC] PHP Warning:  require(header.php): failed to open stream: No such file or directory in /home/meravalis/public_html/Includes/aboutme.php on line 2
+[03-Oct-2020 21:04:35 UTC] PHP Fatal error:  require(): Failed opening required 'header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/meravalis/public_html/Includes/aboutme.php on line 2
+[03-Oct-2020 22:51:38 UTC] PHP Fatal error:  Call to undefined function session_star() in /home/meravalis/public_html/Includes/cakel.php on line 2

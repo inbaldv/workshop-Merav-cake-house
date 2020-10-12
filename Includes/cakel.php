@@ -1,4 +1,7 @@
-
+<?php
+    session_start();
+    require "recipes_header.php"
+?>
 
 <!doctype html>
 <html lang="en" style="position:relative;">
@@ -28,12 +31,16 @@
     <title>Merav's Cake House</title>
 
     <script> 
-	$(function(){
-	$("#header").load("header.html"); 
-	$("#footer").load("footer.html"); 
-	});
-	</script>
-	
+// 	$(function(){
+// 	$("#header").load("header.html"); 
+// 	$("#footer").load("footer.html"); 
+// 	});
+ 	</script>
+
+
+
+
+
 	<script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
 
   </head>
@@ -125,7 +132,7 @@
         <h5 class="modal-title w-100 text-center" id="exampleModalLongTitle">רשימת קניות</h5>
                    <button type="button" class="close" data-dismiss="modal">&times;</button>   
       </div>
-      <div class="modal-body" style="direction:rtl;float:right;text-align:right;flex-direction:row;">
+      <div class="modal-body" style="direction:rtl;float:right;text-align:right;">
        
            
             <p>עוגת לוטוס</p>
@@ -151,7 +158,7 @@
               <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value="340 גרם גבינה שמנת  25 אחוז ">
               <label for="vehicle2"> גבינה שמנת 25%</label>
               <div item-count class="count" style="float:left">340 גרם</div> <br>
-                <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 65 גרם סוכר">
+              <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 65 גרם סוכר">
               <label for="vehicle2"> סוכר</label>
               <div item-count class="count" style="float:left">65 גרם</div> <br>
             <input type="checkbox" id="vehicle2" name="vehicle2" class="child" value=" 25 גרם חמאה">
@@ -324,10 +331,13 @@
 			</a>
     </center>        
 
-    <div id="footer"></div>
+    <!--<div id="footer"></div>-->
     </div>
     </div>
 </body>            
 
 </html>
 
+<?php
+    require "../PHP/footer.php"
+?>
