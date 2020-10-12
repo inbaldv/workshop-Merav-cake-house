@@ -54,18 +54,5 @@ function redirecthala(){
 }
      
      
-     function send_handle(string)
-      {
-          
-           // let num=document.getElementById("number").value;
-             let msg=string;
-             console.log(msg);
-       //     let name= document.getElementById("name").value;
-            
-
-        var win = window.open(`https://wa.me/?text= רשימת%20קניות%20עוגת%20אוריאו:${msg}`, '_blank');
-
-        }     
-    
-
+ 
 

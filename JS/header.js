@@ -8,11 +8,11 @@
 		}
                         
     function redirectaboutme(){
-		window.location="../Includes/aboutme.html";
+		window.location="../Includes/aboutme.php";
 	}
 
 	function redirectcatalog() {
-		window.location="../Includes/catalogPage.html";
+		window.location="../Includes/catalogPage.php";
 	}
 	
 	function redirectbread() {

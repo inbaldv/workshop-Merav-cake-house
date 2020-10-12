@@ -21,11 +21,11 @@ function showDivs(n, no) {
                 
 			
 function redirectaboutme(){
- window.location="../Includes/aboutme.html";
+ window.location="../Includes/aboutme.php";
 }
 
 function redirectcatalog() {
- window.location="../Includes/catalogPage.html";
+ window.location="../Includes/catalogPage.php";
 }
 function redirectbread(){
  window.location="../PHP/filterRecipes_bread.php";
@@ -37,4 +37,8 @@ function redirectdessert() {
 
 function redirectcakes() {
  window.location="../PHP/filterRecipes_cake.php";
+}
+
+function redirectwhatsap() {
+ window.location="https://wa.me/972532733898/";
 }
