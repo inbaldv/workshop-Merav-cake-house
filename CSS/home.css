@@ -179,9 +179,7 @@ button {
 
 input[type=text], input[type=password], #signout  {
       
-      width: 100%;
-      padding: 9px;
-      margin: 5px 0 5px 0;
+      padding: 5px;
       display: inline-block;
       border: none;
       background: #f1f1f1;
@@ -230,6 +228,13 @@ hr {
       opacity: 1;
     }
  
- 
+@media screen and (max-width: 600px) {
+    .dropdown{margin: 3px;
+    font-size: 10px;
+    font-weight: lighter;
+    padding: 0px 3px;}
+    .dropdown.form.button{padding: 0px 5px;}
+}
+
 
 

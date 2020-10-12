@@ -40,3 +40,10 @@ input{text-align:right;}
     background:white;
     border:solid 3px lavender;
     font-size: 15px;}
+    
+@media screen and (max-width: 600px) {
+    button{padding: 0px 5px;
+        font-size: 15px;
+    }
+}
+
