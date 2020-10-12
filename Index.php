@@ -6,6 +6,7 @@ session_start();
 
 <!doctype html>
 <html lang="en" style="position:relative;">
+    
   <head>
   
 
@@ -15,7 +16,9 @@ session_start();
     <link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,9 +44,6 @@ session_start();
     <meta name="google-signin-client_id" content="135221622356-lbc7m6ashb0bqiv7fsu656p2ii3sok01.apps.googleusercontent.com">
     
 
-    <!-- Load the JS SDK asynchronously -->
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v8.0&appId=808605256550695&autoLogAppEvents=1" nonce="UCv4Elb2"></script>
-    
     <style>
     </style>
 
@@ -96,171 +96,75 @@ session_start();
   </head>
 <body>
     
- 
+  <!-- Button trigger sign in modal -->
+      <?php
+                        
+                            if (isset($_SESSION['userId']) ) {
+                                
+                                echo '
+                                    <form action="../PHP/signOut.php" method="post" class="dropdown">
+                                     <button type="submit" style="font-weight:lighter; " > התנתק</button>
+                                     </form>';
+                                }
+                            
+                                else {
+                                    echo '<button type="button" data-toggle="modal" data-target="#signinModal" class="dropdown"
+                                    style="font-weight:lighter;">כניסה</button> ';
+                                } 
+                            
+
+                        ?> 
+
 <div id="wrapper" class="container-fluid">
+     
+
     <div id="internalWrapper" class="container-fluid">
 	    <header>
 				<img class="logo" src= "../Images/LOGO.jpeg" class="responsive">
 	    </header>
 			
-			
-			  <div class="topnav" style="margin-left:10%" id="myTopnav">
+			<center>
+			  <div class="topnav" style="display: grid;" id="myTopnav">
 			      
 				    <a href="#contact" style="display:none">קצת עליי</a>
 				 
-			        <script>
-                      function signOut() {
-                        var auth2 = gapi.auth2.getAuthInstance();
-                        auth2.signOut().then(function () {
-                          console.log('User signed out.');
-                        });
-                      }
-                    </script>
-				
-                  
+			       
+
 				    <div class="dropdown">
 				        
-                        <script>
-                          function signOut() {
-                            var auth2 = gapi.auth2.getAuthInstance();
-                            auth2.signOut().then(function () {
-                              console.log('User signed out.');
-                             
-                            });
-                          }
-                        </script>
-                                                
-				        <!-- Button trigger sign in modal -->
-                        <?php
                         
-                            if (isset($_SESSION['userId']) ) {
+                        <div class="dropdown">
+				            <form action="../PHP/recipeSearch_php.php" method="post" style="display:flex; flex-direction:row-reverse; padding:3px">
+                                <input class="sinput" type="text" size="10" name="recipe_name" placeholder="...חיפוש">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
 
-                                // echo ' <button class="dropbtn" onclick="#">מתכונים מועדפים</button>';
-                                
-                                echo '
-                                    <form action="../PHP/signOut.php" method="post" class="dropdown">
-                                     <button type="submit" style="margin:15px; font-size:20px;font-weight:bold; padding: 1px 20px;" > התנתק</button>
-                                     </form>';
-                                 
-                                
-                                //   if (isset($_SESSION['userId'])) {
-                                //       echo '
-                                //         <form action="../PHP/signOut.php" method="post" class="dropdown">
-                                //         <button type="submit" style="margin:15px; font-size:20px;font-weight:bold; padding: 1px 20px;" > התנתק</button>
-                                //         </form>';
-                                //   }
-                                  
-                                //   else if ('profile' != NULL) { 
-                                //       echo '
-                                //          <a href="signOut.php" class="btn btn-primary">Logout</a>
-                                //       ';
- 
-                                //   }
-                                    
-                                 
-                                }
-                            
-                                else {
-                                    echo '<button type="button" data-toggle="modal" data-target="#signinModal" class="dropdown" 
-                                    style="margin:15px; font-size:20px;font-weight:bold; padding: 1px 20px;">כניסה</button> ';
-                                }
-                            
-                            
-					
-    					   // if (isset($_GET['error'])){
-    					        
-    					   //    if ($_GET['error'] == "nouser") {
-    					   //       echo '<script> alert("שם משתמש לא תקין")</script>';
-    					   //    } 
-    					       
-    					   //    else if ($_GET['error'] == "wrongpassword") {
-    					   //       echo '<script> alert("סיסמא לא נכונה")</script>';
-    					   //    } 
-    					       
-    					       
-    					       //else if ($_GET['error'] == "sqlerror") {
-    					       //   echo '<script> alert("שגיאה במסד נתונים")</script>';
-    					       //} 
-    					     
-    					   // }
-    					    
-    					   // else if ($_GET['signup'] == "success") {
-    					   //     header ("Location: ../Index.php");
-    					   //     exit();
-    					   // }
 
-                        ?>
-				        
-				        <div class="dropdown" style="margin:15px; margin-top:3px;">
-				    
-				        <form action="../PHP/recipeSearch_php.php" method="post">
-                            <p><input type="text" size="10" name="recipe_name"><input type="submit" value=" חפש מתכון"></p>
-                        </form>
-                        
-                       </div>
-				        <!--<button type="button" class="dropbtn" id="signin"-->
-                        <!-- data-toggle="modal" data-target="#signinModal">כניסה</button>-->
-                        
 					    <button class="dropbtn" onclick="redirectaboutme()">קצת עליי</button>
 					    <button class="dropbtn" onclick="redirectcatalog()">להזמנות</button>
 					    <button class="dropbtn" onclick="redirectbread()">לחמים</button>
 					    <button class="dropbtn" onclick="redirectdessert()">קינוחים</button>
 					    <button class="dropbtn" onclick="redirectcakes()">עוגות</button>
 					    
-					    
-
-					    
 				    </div>
-				    
-				
+
 				    <a href="javascript:void(0);" style="font-size:10px;" class="icon" onclick="myFunction()">&#9776;</a>
 				</div>
-		        
+		        </center>
 		        <!-- Sign in Modal -->
                         <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" dir="rtl">
                           <div class="modal-dialog" role="document" >
                             <div class="modal-content" >
                               <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">ברוך הבא! </h5> 
-                                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
-                                <!--  <span aria-hidden="true">&times;</span>-->
-                                <!--</button>-->
+                              <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;font-size: 20px;">ברוך הבא! </h5> 
+
                               </div>
                               <div class="modal-body">
                         
                             <form action="../PHP/signIn.php" method="post">
                             <div class="container">
-                                
-                                <script src="https://apis.google.com/js/platform.js" async defer></script>
-                                
-                                
-                                <center><div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div></center>
-                                
-                                <script>
-                                 function onSignIn(googleUser) {
-                                 var profile = googleUser.getBasicProfile();
-                                 console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                                 console.log('Name: ' + profile.getName());
-                                 console.log('Image URL: ' + profile.getImageUrl());
-                                 console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                                }
-                                </script>
-                                
-                                
-                                <br>
-                                
-                                <!--facebook sign in-->
-                                
-                                <!-- The JS SDK Login Button -->
-
-                                <div id="status">
-                                </div>
-
-                                <center><div class="fb-login-button" data-size="medium" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div></center>
-                                
-                                
-                                
-                                <hr >
+                   
                                 
                                 <label for="userEmailName" style="float:right;" ><b>שם משתמש/מייל</b></label>
                                 <input type="text" placeholder="Enter Email/Name" name="userEmailName" id="userEmailName" 
@@ -346,8 +250,7 @@ session_start();
                     <a dir="rtr" href="https://www.instagram.com/meravscakehouse/"></a>
                     <img border="0" alt="icon missing" src="../Images/instegram.JPG" width="40px" height="auto">
 
-                    <a dir="rtr" href="https://wa.me/972532733898"></a>
-                    <img border="0" alt="icon missing" src="../Images/whatsapp.jpg" width="40px" height="auto"> 
+                    <img  border="0" alt="icon missing" src="../Images/whatsapp.jpg" width="40px" height="auto"  onclick="redirectwhatsap()"> 
                 </center>         
    
                 
