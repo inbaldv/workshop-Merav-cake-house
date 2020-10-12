@@ -2,7 +2,6 @@
 
 session_start();
 
-
 ?>
 
 <!doctype html>
@@ -68,39 +67,20 @@ session_start();
                                     class="dropbtn" >כניסה</button> ';
                                 }
                             
-                            
-					
-    					   // if (isset($_GET['error'])){
-    					        
-    					   //    if ($_GET['error'] == "nouser") {
-    					   //       echo '<script> alert("שם משתמש לא תקין")</script>';
-    					   //    } 
-    					       
-    					   //    else if ($_GET['error'] == "wrongpassword") {
-    					   //       echo '<script> alert("סיסמא לא נכונה")</script>';
-    					   //    } 
-    					       
-    					       
-    					       //else if ($_GET['error'] == "sqlerror") {
-    					       //   echo '<script> alert("שגיאה במסד נתונים")</script>';
-    					       //} 
-    					     
-    					   // } 
-    					    
-    					   // else if ($_GET['signup'] == "success") {
-    					        
-    					       
-    					   //     header ("Location: ../Index.php");
-    					   //     exit();
-    					   // }
 
                         ?>
                         </div>
 
-					 
+					 <?php
+                        
+                    if (isset($_SESSION['userId'])) {
+				    echo '
 					<div class="dropdown">
 						<button class="dropbtn" onclick="redirectcatalog()">להזמנות</button>
-				  	</div> 
+				  	</div> ';
+                    }
+                    
+                    ?>
 				  	
 				  	<div class="dropdown">
 						<button class="dropbtn" onclick="redirectbread()">לחמים</button>
@@ -136,7 +116,7 @@ session_start();
                           <div class="modal-dialog" role="document" >
                             <div class="modal-content" >
                               <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center;">ברוך הבא! </h5> 
+                              <h5 class="modal-title" id="exampleModalLongTitle" style="text-align: center; font-size: 25px;">ברוך הבא! </h5> 
                                 <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
                                 <!--  <span aria-hidden="true">&times;</span>-->
                                 <!--</button>-->
@@ -145,31 +125,7 @@ session_start();
                         
                             <form action="../PHP/signIn.php" method="post">
                             <div class="container">
-                                
-                                <script src="https://apis.google.com/js/platform.js" async defer></script>
-                                <meta name="google-signin-client_id" content="135221622356-lbc7m6ashb0bqiv7fsu656p2ii3sok01.apps.googleusercontent.com">
-                                
-                                
-                                
-                                <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                                <script>
-                                  function onSignIn(googleUser) {
-                                 var profile = googleUser.getBasicProfile();
-                                 console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-                                 console.log('Name: ' + profile.getName());
-                                 console.log('Image URL: ' + profile.getImageUrl());
-                                 console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-                                }
-                                </script>
-                                
-                                <!--facebook sign in-->
-                                <!--<div id="fb-root"></div>-->
-                                <!--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="aDJ838CH" ></script>-->
-                                <!--<div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>-->
-                                
-                                
-                                <hr >
-                                
+
                                 <label for="userEmailName" style="float:right;" ><b>שם משתמש/מייל</b></label>
                                 <input type="text" placeholder="Enter Email/Name" name="userEmailName" id="userEmailName" 
                                 style="width: 100%; padding: 9px; margin: 5px; display: inline-block; border: none;

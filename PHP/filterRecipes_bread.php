@@ -1,5 +1,6 @@
 <?php
     require "header.php";
+    session_start ();
     
     $host="localhost";
 	$user = "meravali_meraval";
@@ -46,6 +47,8 @@
 	<script type="text/javascript" src='../JS/header.js'></script>
 	<script type="text/javascript" src='../JS/Reciep.js'></script>
 	<script src="../JS/catalog.js"></script>
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   	<script>!function(e,t,a){var c=e.head||e.getElementsByTagName("head")[0],n=e.createElement("script");n.async=!0,n.defer=!0, n.type="text/javascript",n.src=t+"/static/js/chat_widget.js?config="+JSON.stringify(a),c.appendChild(n)}(document,"https://app.engati.com",{bot_key:"99d00c2319994219",welcome_msg:true,branding_key:"default",server:"https://app.engati.com",e:"p" });</script>
   
@@ -57,20 +60,26 @@
        text-align: right;
     }
     
+    #loading
+    {
+	text-align:center; 
+	background: url('../Images/loader.gif') no-repeat center; 
+	height: 150px;
+    }
+    
 </style>
 
 <body>
     <!-- Page Content -->
-    <div class="container" dir="rtl" style="margin-right:5%;">
+    <div class="container-fluid" dir="rtl" style="">
         
-        <p class="pcatalog"> לחמים</P>
+        <p class="pcatalog" style="font-size: 35px"> לחמים</P>
         
-        <div class="row" style="margin-right: -40px; margin-left: -40px;">
-        	<br />
-        	<!--<h2 align="center"> סינון </h2>-->
-        	<br />
-            <div class="col-md-3">                				
-					<div style="overflow-y: auto;">		
+        <div class="row" style="margin-right:1%;">
+        	
+            <div class="filter_options col-md-3">                				
+				<div style="overflow-y: auto;">
+				    		
                 <div class="list-group">
 					<h3> זמן הכנה </h3>
                     
@@ -98,7 +107,26 @@
                     <?php
 
                     $query = "
-                    SELECT DISTINCT(recipes_difficulty) FROM recipes ORDER BY recipes_difficulty ASC
+                    SELECT DISTINCT(recipes_difficulty) FROM recipes WHERE recipes_difficulty='קל'
+                    ";
+                    $statement = $conn->prepare($query);
+                    $statement->execute();
+                    $result = $statement->fetchAll();
+                    foreach($result as $row)
+                    {
+                    ?>
+                    <div class="list-group-item checkbox">
+                        <label><input type="checkbox" class="common_selector recipes_difficulty" value="<?php echo $row['recipes_difficulty']; ?>" > <?php echo $row['recipes_difficulty']; ?> </label>
+                    </div>
+                    <?php    
+                    }
+
+                    ?>
+					
+                    <?php
+
+                    $query = "
+                    SELECT DISTINCT(recipes_difficulty) FROM recipes WHERE recipes_difficulty!='קל' ORDER BY recipes_difficulty ASC
                     ";
                     $statement = $conn->prepare($query);
                     $statement->execute();
@@ -158,10 +186,18 @@
 				
             </div>
 
-            <div class="col-md-9">
-            	<br />
+            <div class="col-md-9" style="padding-right:2%;">
+            	
                 <div class="row filter_data">
-
+                   
+                    <span id="rating_list" > 
+                    
+                    <?php if (is_null($_SESSION['userId'])) {
+                        echo '<script> alert("התחבר כדי לראות את דירוגי המתכונים ולדרג!") </script>';
+                    } ?>
+               
+                    </span>
+                    
                 </div>
             </div>
         </div>
@@ -212,7 +248,65 @@ $(document).ready(function(){
     $('.common_selector').click(function(){
         filter_data();
     });
-
+    
+    $(document).on('mouseenter', '.rating', function(){
+      var index = $(this).data("index");
+      var recipes_counter = $(this).data('recipes_counter');
+      remove_background(recipes_counter);
+      for(var count = 1; count<=index; count++)
+      {
+       $('#'+recipes_counter+'-'+count).css('color', '#ffcc00');
+      }
+     });
+     
+     function remove_background(recipes_counter)
+     {
+      for(var count = 1; count <= 5; count++)
+      {
+       $('#'+recipes_counter+'-'+count).css('color', '#ccc');
+      }
+     }
+     
+     $(document).on('mouseleave', '.rating', function(){
+      var index = $(this).data("index");
+      var recipes_counter = $(this).data('recipes_counter');
+      var rating = $(this).data("rating");
+      remove_background(recipes_counter);
+      //alert(rating);
+      for(var count = 1; count<=rating; count++)
+      {
+       $('#'+recipes_counter+'-'+count).css('color', '#ffcc00');
+      }
+     });
+    
+    
+     $(document).on('click', '.rating', function(){
+      filter_data();
+      var index = $(this).data("index");
+      var recipes_counter = $(this).data('recipes_counter');
+      $.ajax({
+       url:"recipesData_cake.php",
+       method:"POST",
+       data:{index:index, recipes_counter:recipes_counter},
+       success:function(data)
+       {
+        if(data != 'done')
+        {
+        
+         alert("דירגת "+index +" מתוך 5. ");
+         
+        }
+        
+        else
+        {
+         alert("יש בעיה במערכת.");
+        }
+       }
+      });
+      
+      
+      
+     });
 
 
 });

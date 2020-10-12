@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require "../Includes/recipes_header.php"
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,12 +30,12 @@
 	
     <title>Merav's Cake House</title>  
 	
-    <script> 
-	$(function(){
-	$("#header").load("../Includes/header.html"); 
-	$("#footer").load("../Includes/footer.html"); 
-	});
-	</script>
+ <!--   <script> -->
+	<!--$(function(){-->
+	<!--$("#header").load("../Includes/header.html"); -->
+	<!--$("#footer").load("../Includes/footer.html"); -->
+	<!--});-->
+	<!--</script>-->
     
 </head>
 <body>
@@ -46,23 +51,20 @@
 <?php
 
 function GetPriceByProductID($store_id){
-    $api_key = 'cdff2015d9827f24c09bd5a3cacc3c6eb4703d9a';
+    $api_key = '8a781b2c392afa7958ecd6bcc6b6d5501263224e';
     $data3['api_key'] = $api_key;
     $data3['action'] = 'GetPriceByProductID';
     $data3['store_id'] =$store_id;
     $data3['product_id'] = array('6191','2925','8727','870','106','341642','995');
     $result= send_post_to_url('https://api.superget.co.il/', $data3);
     $obj3 = json_decode($result,TRUE);
-  // echo $result;
     $total_price=0;
     for($i = 0; $i <=7; $i++){
        
     
          $store_product_price= $obj3[$i]['store_product_price'];
-        //$calc=$obj3[$i]['store_product_price']+$calc;
-        $total_price += (float)$store_product_price;
-        //echo $obj3[$i]['store_product_price']."<br/>";
-      
+         $total_price += (float)$store_product_price;
+
     }
     
          return $total_price;
@@ -70,23 +72,20 @@ function GetPriceByProductID($store_id){
 }
 
 function GetMissingProductID($store_id){
-    $api_key = 'cdff2015d9827f24c09bd5a3cacc3c6eb4703d9a';
+    $api_key = '8a781b2c392afa7958ecd6bcc6b6d5501263224e';
     $data3['api_key'] = $api_key;
     $data3['action'] = 'GetPriceByProductID';
     $data3['store_id'] =$store_id;
     $data3['product_id'] = array('6191','2925','8727','870','106','341642','995');
     $result= send_post_to_url('https://api.superget.co.il/', $data3);
     $obj3 = json_decode($result,TRUE);
-   // echo $result;
-    $total_price=0;
     $count=0;
     for($i = 0; $i <=6; $i++){
        
     if ($obj3[$i]['product_id']==null)
     {
         $count++;
-       // $proudct=
-        
+    
         
     }
     
@@ -109,18 +108,14 @@ function send_post_to_url($url,$post) {
 
 $city_id=$_POST['mySelect']; 
 $_POST['mySelect']; 
-$api_key = 'cdff2015d9827f24c09bd5a3cacc3c6eb4703d9a';
+$api_key = '8a781b2c392afa7958ecd6bcc6b6d5501263224e';
 $data['api_key'] = $api_key;
 $data['action'] = 'GetStoresByCityID';
 $data['city_id'] = $city_id;
 $response = send_post_to_url('https://api.superget.co.il/', $data);
 $obj = json_decode($response,TRUE);
-//GetPriceByProductID('108');
-//echo $response;
 
-$all_stores_prices=(object)[];
-   echo "<div><table><tr><th> רשת</th><th>שם חנות</th><th>כתובת חנות</th><th>מחיר סל הקניות</th><th>מס' מוצרים חסרים</th></tr>";
-  	  //	 echo "<div><table><tr><th> רשת</th><th>שם חנות</th><th>כתובת חנות</th><th>מחיר סל הקניות</th><th>מס' מוצרים חסרים</th><th>נווט</th></tr>";
+echo "<div><table><tr><th> רשת</th><th>שם חנות</th><th>כתובת חנות</th><th>מחיר סל הקניות</th><th>מס' מוצרים חסרים</th><th>נווט</th></tr>";
 
 
 for ($i = 0; $i <= 6; $i++){
@@ -136,102 +131,24 @@ for ($i = 0; $i <= 6; $i++){
         $store_address='כתובת החנות לא זמינה כעת';
     }
      
-    //echo "{";
-  //  echo "שם החנות: ".$chain_name." ";
- //   echo $store_name . ", ";
-//	echo "כתובת החנות: ".$store_address.", ";
-	//echo $store_id;
-  //  echo "מחיר סל הקניות: ".  $store_price;
-  //  echo "חוסרים: ". $count;
-  //	echo "<br/>";
+
+$src="../Images/waze.jpg";
+$height_img="height=50";
+$width_img="width=50";
+
   	
-  echo "<tr><td>".$chain_name."</td><td>".$store_name."</td><td>".$store_address."</td><td>".$store_price."</td><td>".$count."</td></tr>";
+  	
+$waze_link="https://waze.com/ul?q=$chain_name%20$store_name%20$city_name%20$store_address";
+  
 
-// echo "<tr><td>".$chain_name."</td><td>".$store_name."</td><td>".$store_address."</td><td>".$store_price."</td><td>".$count."</td><td><a href="https://waze.com/ul?q=$store_address"."</a></td></tr>";
+echo "<tr><td>".$chain_name."</td><td>".$store_name."</td><td>".$store_address."</td><td>".$store_price."</td><td>".$count."</td><td><a href=".$waze_link."><img src=$src $height_img $width_img></a></td></tr>";
 
 
-    
-  	//echo  $all_stores_prices;
-  	//array_push($all_stores_prices, (object)
-    //  'store_name' => $store_name,
-    //'store_price' =>   $store_price,
     
 }
      echo "</table></div>";
 
        
-	
-  /*	echo "סל הקניות הזול ביותר הוא "
-  	
-
-
-
-
-/*function CheapestShoppingCart($all_stores_prices)
-{
-    
-   $n = count($all_stores_prices);  
-   $min = $all_stores_prices[0]->'store_price'; 
-   foreach ( $all_stores_prices as $store) { 
-       if ($min >  $all_stores_prices[0]->'store_price') 
-           $min =  $all_stores_prices[0]'store_price'; 
-    return $min, ;        
-    
-}*/ 
-
-//$api_key = '8d17e244994be2e2c03d62290e67765e87dbbb65';
-//$data['api_key'] = $api_key;
-//$data['action'] = 'GetCityByName';
-//$data['city_name'] = 'אשדוד';
-//$response = send_post_to_url('https://api.superget.co.il/', $data);
-//$obj = json_decode($response);
-//$city_id = $obj['city_id'];
-  //  $store_name = $obj['store_name'];
-
-//echo $city_id;
- 
- 
-//$data2['api_key'] = $api_key;
-//$data2['action'] = 'GetStoresByCityID';
-//$data2['city_id'] = $city_id;
-//$response2 = send_post_to_url('https://api.superget.co.il/', $data2);
-//echo $response2;
-//$obj2 = json_decode($response2);
-
-
-
-
-
-
-//
-
-
-//$store_name= $obj2[0]->store_name;
-//$store_name2= $obj2[1]->store_name;
-
-//$city_name=$obj2[0]->city_name;
-//chain_name
-//store_address
-
-//echo $store_name. '/n';
-//echo $store_name2. '/n';
-
-
-
-
-
-
-//echo $city_name;
-
-//foreach($obj2 as $object){
-  //  $store_name = $obj['store_name'];
-    //$store_id = $obj['store_id'];
-    //GetPriceByProductID($store_id);
-	 //echo  $store_name;
-	 //echo $ProductPrice;
-	//}	
-
-
 
 
 
@@ -240,9 +157,13 @@ for ($i = 0; $i <= 6; $i++){
 <br>
 <br>
 
-        <div id="footer"></div>
+        <!--<div id="footer"></div>-->
     
     </div>
 </div>
 </body>
 </html>
+
+<?php
+    require "../PHP/footer.php"
+?>

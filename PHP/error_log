@@ -1186,3 +1186,188 @@ Stack trace:
 [27-Sep-2020 14:15:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, null given in /home/meravalis/public_html/PHP/kcake_test.php on line 90
 [27-Sep-2020 14:15:51 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/meravalis/public_html/PHP/kcake_test.php on line 91
 [27-Sep-2020 14:25:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/meravalis/public_html/PHP/kcake_test.php on line 524
+[27-Sep-2020 22:41:30 UTC] PHP Fatal error:  Call to a member function fetchAccessTokenWithAuthCode() on null in /home/meravalis/public_html/PHP/signIn1.php on line 102
+[27-Sep-2020 22:41:50 UTC] PHP Fatal error:  Class 'Google_Service_Oauth2' not found in /home/meravalis/public_html/PHP/signIn1.php on line 106
+[28-Sep-2020 14:21:43 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[28-Sep-2020 14:21:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[28-Sep-2020 15:44:44 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[28-Sep-2020 15:52:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[28-Sep-2020 16:00:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[28-Sep-2020 16:08:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:35:53 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:17 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:25 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[29-Sep-2020 14:36:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[30-Sep-2020 20:42:04 UTC] PHP Warning:  Division by zero in /home/meravalis/public_html/PHP/super_whitebread.php on line 155
+[30-Sep-2020 20:42:05 UTC] PHP Warning:  Division by zero in /home/meravalis/public_html/PHP/super_whitebread.php on line 155
+[30-Sep-2020 20:46:21 UTC] PHP Warning:  Division by zero in /home/meravalis/public_html/PHP/super_whitebread.php on line 155
+[30-Sep-2020 20:46:22 UTC] PHP Warning:  Division by zero in /home/meravalis/public_html/PHP/super_whitebread.php on line 155
+[30-Sep-2020 20:47:12 UTC] PHP Parse error:  syntax error, unexpected '.' in /home/meravalis/public_html/PHP/super_whitebread.php on line 189
+[01-Oct-2020 12:32:09 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:14 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:18 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:32 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:52 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:32:55 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:33:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[01-Oct-2020 12:33:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:73
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(73): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 73
+[02-Oct-2020 15:18:23 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 08:48:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 09:53:46 UTC] PHP Warning:  require(recipes_header.php): failed to open stream: No such file or directory in /home/meravalis/public_html/PHP/super_whitebread.php on line 4
+[04-Oct-2020 09:53:46 UTC] PHP Warning:  require(recipes_header.php): failed to open stream: No such file or directory in /home/meravalis/public_html/PHP/super_whitebread.php on line 4
+[04-Oct-2020 09:53:46 UTC] PHP Fatal error:  require(): Failed opening required 'recipes_header.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/meravalis/public_html/PHP/super_whitebread.php on line 4
+[04-Oct-2020 10:12:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 10:59:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 14:16:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 14:17:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 19:15:42 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 19:21:20 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[04-Oct-2020 23:37:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77
+[05-Oct-2020 12:54:41 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error' in /home/meravalis/public_html/PHP/recipesData_cake.php:77
+Stack trace:
+#0 /home/meravalis/public_html/PHP/recipesData_cake.php(77): PDOStatement->fetchAll()
+#1 {main}
+  thrown in /home/meravalis/public_html/PHP/recipesData_cake.php on line 77

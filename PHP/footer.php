@@ -15,17 +15,25 @@
                 <div class="col-md-4">
                     <h5>שימושי</h5>			 
 			        <a class="text-body" href="#" title="לא פעיל">צור קשר</a><br>
-                    <a class="text-body" href="../Includes/aboutme.html">אודות</a><br>
+                    <a class="text-body" href="../Includes/aboutme.php">אודות</a><br>
 			        <a class="text-body" href="#" title="לא פעיל">המרת מידות ומשקלים</a><br>
 			        <a class="text-body" href="#" title="לא פעיל">בואו נעבוד ביחד</a>
 			    </div>
 			    
 			    <div class="col-md-4">	
 			        <h5>קטגוריות מומלצות</h5>
-		            <a class="text-body" href="../Includes/Cakes.html">עוגות</a><br>
-                    <a class="text-body" href="../Includes/dessert.html">קינוחים</a><br>
-                    <a class="text-body" href="../Includes/bread1.html">לחמים</a><br>	
-                    <a class="text-body" href="../Includes/catalogPage.html">ביצוע הזמנה</a><br>			  
+		            <a class="text-body" href="../PHP/filterRecipes_cake.php">עוגות</a><br>
+                    <a class="text-body" href="../PHP/filterRecipes_dessert.php">קינוחים</a><br>
+                    <a class="text-body" href="../PHP/filterRecipes_bread.php">לחמים</a><br>
+                    <?php
+                        
+                    if (isset($_SESSION['userId'])) {
+				    echo '
+					<a class="text-body" href="../Includes/catalogPage.php">ביצוע הזמנה</a><br>';
+                    }
+                    
+                    ?>
+                    			  
 			    </div>
 	    	</div>
         </footer>

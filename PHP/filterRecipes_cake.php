@@ -75,11 +75,21 @@
 @media screen and (max-width: 600px) {
     
     .row {
-    display: block;
+    display: initial;
    
-}
     }
+}
 
+@media screen and (max-width: 600px) {
+          .card {
+              position: relative;
+              width: 50%;
+              margin: 0%;
+              
+              
+          }
+          
+      }
 
 </style>
 
@@ -88,13 +98,13 @@
 
 <body>
     <!-- Page Content -->
-    <div class="container ml-60px" dir="rtl" style="margin-right:5%;">
+    <div class="container-fluid" dir="rtl" style="">
         
         <p class="pcatalog" style="font-size: 35px"> עוגות</P>
         
-        <div class="row" style="margin-right: -40px; margin-left: -40px;">
+        <div class="row" style=" margin-right:1%;">
 
-            <div class="filter_options col-md-3 ">                				
+            <div class="filter_options col-md-3" >                				
 				<div style="overflow-y: auto;">	
 				
                 <div class="list-group">
@@ -123,10 +133,30 @@
 
 				<div class="list-group">
 					<h3>רמת קושי</h3>
+					
+					<?php
+
+                    $query = "
+                    SELECT DISTINCT(recipes_difficulty) FROM recipes WHERE recipes_difficulty='קל'
+                    ";
+                    $statement = $conn->prepare($query);
+                    $statement->execute();
+                    $result = $statement->fetchAll();
+                    foreach($result as $row)
+                    {
+                    ?>
+                    <div class="list-group-item checkbox">
+                        <label><input type="checkbox" class="common_selector recipes_difficulty" value="<?php echo $row['recipes_difficulty']; ?>" > <?php echo $row['recipes_difficulty']; ?> </label>
+                    </div>
+                    <?php    
+                    }
+
+                    ?>
+					
                     <?php
 
                     $query = "
-                    SELECT DISTINCT(recipes_difficulty) FROM recipes ORDER BY recipes_difficulty ASC
+                    SELECT DISTINCT(recipes_difficulty) FROM recipes WHERE recipes_difficulty!='קל' ORDER BY recipes_difficulty ASC
                     ";
                     $statement = $conn->prepare($query);
                     $statement->execute();
@@ -247,7 +277,7 @@
 				
             </div>
 
-            <div class="col-md-9" >
+            <div class="col-md-9" style="padding-right:2%;">
             	
                 <div class="row filter_data">
                
@@ -347,7 +377,7 @@ $(document).ready(function(){
     
     
      $(document).on('click', '.rating', function(){
-    //   filter_data();
+      filter_data();
       var index = $(this).data("index");
       var recipes_counter = $(this).data('recipes_counter');
       $.ajax({
@@ -365,7 +395,7 @@ $(document).ready(function(){
         
         else
         {
-         alert("There is some problem in System");
+         alert("יש בעיה במערכת.");
         }
        }
       });

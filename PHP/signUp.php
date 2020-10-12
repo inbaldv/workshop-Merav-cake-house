@@ -1,7 +1,5 @@
 <?php
 
-    // if (isset ($POST ['signup-submit'])) {
-
     session_start();
 
 
@@ -15,7 +13,7 @@
 	if ($conn-> connect_error) {
 	die ("Connection faild: " .$conn->connect_error); }
 	
-	echo "Connection successful";
+// 	echo "Connection successful";
 	
 
     if (!$conn->set_charset("utf8")) { printf("Error loading character set utf8: %s\n", $conn->error); exit();}
@@ -25,29 +23,34 @@
     $userEmail = $_POST ['userEmail'];
     $userPassword = $_POST ['userPassword'];
     $repeatPassword = $_POST['repeatPassword'];
+    $url=$_SERVER['HTTP_REFERER'];
     
-    // if (empty($userName) || empty($userEmail) || empty($userPassword) || empty($repeatPassword)) {
-    //     header ("Location: signUp1.php?error=emptyfields&userName=" .$userName. "&mail=" .$userEmail);
-    //     exit();
-    // } else
     
     if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9א-ת]*$/", $userName)) {
-        header ("Location: signUp1.php?error=invalidemailandname");
+        echo '<script> alert("שם המשתמש והמייל לא תקינים.");
+          window.location.href = document.referrer;
+          </script>';
         exit();
     }
     
     else if (!filter_var($userEmail, FILTER_VALIDATE_EMAIL)) {
-       header ("Location: signUp1.php?error=invalidemail&=userName=" .$userName);
+       echo '<script> alert("מייל לא תקין.");
+          window.location.href = document.referrer;
+          </script>';
        exit();
     }
    
     else if (!preg_match("/^[a-zA-Z0-9א-ת]*$/", $userName)) {
-      header ("Location: signUp1.php?error=invalidname&=userEmail=" .$userEmail);
+      echo '<script> alert("שם המשתמש לא תקין.");
+          window.location.href = document.referrer;
+          </script>';
       exit();
     }
     
     else if ($userPassword !== $repeatPassword) {
-        header ("Location: signUp1.php?error=passwordcheck&=&=userName" .$userName. "&userEmail=" .$userEmail);
+        echo '<script> alert("סיסמא לא נכונה.");
+          window.location.href = document.referrer;
+          </script>';
       exit();
     }
     
@@ -57,7 +60,9 @@
     $sql = " SELECT userName FROM users WHERE userName=?";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header ("Location: signUp1.php?error=sqlerror");
+        echo '<script> alert("שגיאה!");
+          window.location.href = document.referrer;
+          </script>';
         exit();
     }
     
@@ -67,7 +72,9 @@
         mysqli_stmt_store_result($stmt);
         $resultCheck = mysqli_stmt_num_rows($stmt);
         if ($resultCheck > 0) {
-         header ("Location: signUp1.php?error=usertaken&=userEmail" .$userEmail);
+         echo '<script> alert("שם המשתמש תפוס, נסה שם אחר.");
+          window.location.href = document.referrer;
+          </script>';
         exit();
         }
         
@@ -75,7 +82,9 @@
              $sql = "INSERT INTO users (userName, userEmail, userPassword) VALUES (?, ?, ?)";
              $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header ("Location: signUp1.php?error=sqlerror");
+            echo '<script> alert("שגיאה!");
+              window.location.href = document.referrer;
+              </script>';
             exit();
         }
         else {
@@ -83,7 +92,7 @@
             $hashedPassword = password_hash($userPassword, PASSWORD_DEFAULT);
             mysqli_stmt_bind_param($stmt, "sss", $userName, $userEmail, $hashedPassword);
             mysqli_stmt_execute($stmt);
-            header ("Location: signUp1.php?signup=success");
+            header ("Location: $url");
             exit();
         }
         
@@ -96,20 +105,6 @@
     mysqli_stmt_close($stmt);
     mysqli_close ($conn);
     
-// }
-
-// else {
-    
-//     echo failed;
-//     // header ("Location: signUp1.php");
-//     // exit();
-// }
-
-
-    // fb creds
-//	 define( 'FB_APP_ID', '808605256550695' );
-//	 define( 'FB_APP_SECRET', '16ed4e523a054dbacf32820e713b3539' );
-//	 define( 'FB_REDIRECT_URI', 'https://meravalis.mtacloud.co.il/Index.php' );
 
     
 ?>

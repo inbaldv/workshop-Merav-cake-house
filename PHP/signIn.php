@@ -3,7 +3,6 @@
 
 <?php
 
-   // if (isset ($POST ['signin-submit'])) {
     session_start();
 
     $host="localhost";
@@ -97,19 +96,5 @@
    }
    
 
-// }
-
-// else {
-    
-//         echo failed;
-//         header ("Location: ../Includes/signIn1.php");
-//         exit();
-//  }
 
 ?>
-
-<script>    
-    if(typeof window.history.pushState == 'function') {
-        window.history.pushState({}, "Hide", ".$url");
-    }
-</script>

@@ -30,21 +30,30 @@
     
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
    <script src="http://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src='../JS/Reciep.js'></script>
+   <script type="text/javascript" src='../JS/Reciep.js'></script>
     
     <style>
       .list-inline>li{display:inline-block;padding-right:5px;padding-left:5px;}
       
+
+      
       @media screen and (max-width: 600px) {
-          .card {
+          .card .col-sm-3 {
               position: relative;
               width: 50%;
+              margin: 0;
+              
+              
           }
           
       }
     </style>
     
-    
+    <script> 
+    function InactiveAlert() {
+      alert("העמוד לא פעיל כרגע");
+    }
+    </script>
     
  
 <?php 
@@ -164,6 +173,8 @@
             $rating = count_rating($row['counter'], $conn);
             $color = '';
             
+
+            
             if (isset($_SESSION['userId'])) {
 			$output .= '
                      <br>  
@@ -191,14 +202,17 @@
   	                    
                         <p style=" font-size: small;"> '. $row['recipe_description'] .'</p>
                         <p style=" font-size: medium;"> זמן הכנה: '. $row['recipes_time'] .'</p>
-                    	<p style=" font-size: medium;"> רמת קושי: '. $row['recipes_difficulty'] .' </p>
+                    	<p style=" font-size: medium;"> רמת קושי: '. $row['recipes_difficulty'] .' </p>';
                         
-                       <p><button class="bcard" onclick= window.location="'. $row['recipe_link'] .'";  >קרא עוד</button></p>
-                       
-                       
-
+                       if ($row['recipe_link'] == NULL) {
+                             $output .=  '<p><button class="bcard" onclick= "InactiveAlert()" >קרא עוד</button></p>';
+                          }
+                        else {
+                             $output .= '<p><button class="bcard" onclick= window.location="'. $row['recipe_link'] .'";  >קרא עוד</button></p>';
+                        }
+                      
                 
-                        </div>
+                      $output .=   '</div>
                     </div>
                     </br>
 			';
@@ -213,16 +227,20 @@
   	                    
                         <p style=" font-size: small;"> '. $row['recipe_description'] .'</p>
                         <p style=" font-size: medium;"> זמן הכנה: '. $row['recipes_time'] .'</p>
-                    	<p style=" font-size: medium;"> רמת קושי: '. $row['recipes_difficulty'] .' </p>
+                    	<p style=" font-size: medium;"> רמת קושי: '. $row['recipes_difficulty'] .' </p>';
 
-                       <p><button class="bcard" onclick= window.location="'. $row['recipe_link'] .'";  >קרא עוד</button></p>
-                       
-
+                       if ($row['recipe_link'] == NULL) {
+                             $output .=  '<p><button class="bcard" onclick= "InactiveAlert()" >קרא עוד</button></p>';
+                          }
+                        else {
+                             $output .= '<p><button class="bcard" onclick= window.location="'. $row['recipe_link'] .'";  >קרא עוד</button></p>';
+                        }
+                      
                 
-                        </div>
+                      $output .=   '</div>
                     </div>
                     </br>
-			'; 
+			';
             }
 		}
 		
